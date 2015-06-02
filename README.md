@@ -1,2 +1,2 @@
-# bgptable
-# bgptable
+bgptable is a small python script that scrapes the BGP4 and BGP6 table sizes from the @bgp4_table and @bgp6_table Twitter feeds. It stores the last 365 days of data into a csv file and provides some analytical information regarding the data.
+Copyright (c) 2015 Matt Reath
