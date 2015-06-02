@@ -21,12 +21,13 @@ from dateutil import parser
 con_key = "BBJ4wtXpErzYTkZ5K28yc4Ype"
 con_secret = "okNbaGjgjAg0txCgTPXbtLwLYNbs3RI2Q6sYqio6JAZNwNpxPW"
 
-# need to pull these from a file
-token_key = "15561076-p7PNPSvkbWcQ2FtJr3F5XTO2KDjJt6szWiBc9NCR5"
-token_secret = "mKExrJ4KdudZE74Gw9FnRaOHoziO9ONEXafaHYi7Fi61Z"
+config = ConfigParser.RawConfigParser()
+config.read('bgptable.cfg')
+access_token = config.get('Access Token', 'access_token')
+access_token_secret = config.get('Access Token', 'access_token_secret')
 
 auth = tweepy.OAuthHandler(con_key,con_secret)
-auth.set_access_token(token_key, token_secret)
+auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 # open sqlite3 db, query the most recent status_id
