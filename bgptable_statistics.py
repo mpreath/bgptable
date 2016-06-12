@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 # bgptable is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -13,7 +13,6 @@
 # You should have received a copy of the GNU General Public License
 # along with onstools.  If not, see <http://www.gnu.org/licenses/>.
 
-import twitter
 import re
 import sqlite3
 from dateutil import parser

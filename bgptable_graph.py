@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 # bgptable is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -191,7 +191,7 @@ file = open('weekly_bgp4_graph.png', 'rb')
 data = file.read()
 file_name = os.path.realpath(file.name)
 status_str = 'Weekly BGP4 Graph [{:3.3f}% Growth]'.format(week_growth_percent)
-# api.update_with_media(status=status_str,filename=file_name)
+api.update_with_media(status=status_str,filename=file_name)
 
 
 # Grab all of the IPv4 information in ascending order
@@ -340,7 +340,7 @@ file = open('weekly_bgp6_graph.png', 'rb')
 data = file.read()
 file_name = os.path.realpath(file.name)
 status_str = 'Weekly BGP6 Graph [{:3.3f}% Growth]'.format(week_growth_percent)
-# api.update_with_media(status=status_str,filename=file_name)
+api.update_with_media(status=status_str,filename=file_name)
 
 curs.close()
 conn.close()
